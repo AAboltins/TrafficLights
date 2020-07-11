@@ -19,12 +19,13 @@ namespace TrafficLights
         public Form1()
         {
             InitializeComponent();
+            InitializeIntervals();
             InitializeTrafficLights();
             InitalizetimerSwitch();
         }
         private void InitalizetimerSwitch()
         {
-            I = R;
+            I = int.Parse(redInterval.Text);
             timerSwitch = new Timer();
             timerSwitch.Interval = I;
             timerSwitch.Tick += new EventHandler(TimerSwitch_Tick);
