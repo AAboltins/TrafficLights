@@ -54,7 +54,6 @@ namespace TrafficLights
             tick += 1;
             if ( tick == 1)
             {
-
                 RedLight.BackColor = Color.Red;
                 if (int.TryParse(yellowInterval.Text, out i) && yellowInterval.Text != "")
                 {
@@ -69,6 +68,7 @@ namespace TrafficLights
             }
             else if(tick == 2)
             {
+                RedLight.BackColor = Color.Gray;
                 YellowLight.BackColor = Color.Yellow;
                 if (int.TryParse(greenInterval.Text, out i) && greenInterval.Text != "")
                 {
@@ -83,6 +83,7 @@ namespace TrafficLights
             }
             else if ( tick == 3)
             {
+                YellowLight.BackColor = Color.Gray;
                 GreenLight.BackColor = Color.Green;
                 I = 500;
             }
@@ -104,7 +105,7 @@ namespace TrafficLights
             else if (tick == 7)
             {
                 GreenLight.BackColor = Color.Green;
-                I = 500;
+                I = 1;
             }
             else if (tick == 8)
             {
