@@ -31,6 +31,9 @@
             this.RedLight = new System.Windows.Forms.PictureBox();
             this.YellowLight = new System.Windows.Forms.PictureBox();
             this.GreenLight = new System.Windows.Forms.PictureBox();
+            this.redInterval = new System.Windows.Forms.TextBox();
+            this.yellowInterval = new System.Windows.Forms.TextBox();
+            this.greenInterval = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.RedLight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.YellowLight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GreenLight)).BeginInit();
@@ -46,7 +49,7 @@
             // 
             // YellowLight
             // 
-            this.YellowLight.Location = new System.Drawing.Point(53, 196);
+            this.YellowLight.Location = new System.Drawing.Point(53, 191);
             this.YellowLight.Name = "YellowLight";
             this.YellowLight.Size = new System.Drawing.Size(150, 150);
             this.YellowLight.TabIndex = 1;
@@ -60,11 +63,36 @@
             this.GreenLight.TabIndex = 2;
             this.GreenLight.TabStop = false;
             // 
+            // redInterval
+            // 
+            this.redInterval.Location = new System.Drawing.Point(232, 77);
+            this.redInterval.Name = "redInterval";
+            this.redInterval.Size = new System.Drawing.Size(62, 20);
+            this.redInterval.TabIndex = 3;
+            this.redInterval.Text = "1";
+            // 
+            // yellowInterval
+            // 
+            this.yellowInterval.Location = new System.Drawing.Point(232, 258);
+            this.yellowInterval.Name = "yellowInterval";
+            this.yellowInterval.Size = new System.Drawing.Size(62, 20);
+            this.yellowInterval.TabIndex = 4;
+            // 
+            // greenInterval
+            // 
+            this.greenInterval.Location = new System.Drawing.Point(232, 428);
+            this.greenInterval.Name = "greenInterval";
+            this.greenInterval.Size = new System.Drawing.Size(62, 20);
+            this.greenInterval.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(269, 543);
+            this.ClientSize = new System.Drawing.Size(306, 543);
+            this.Controls.Add(this.greenInterval);
+            this.Controls.Add(this.yellowInterval);
+            this.Controls.Add(this.redInterval);
             this.Controls.Add(this.GreenLight);
             this.Controls.Add(this.YellowLight);
             this.Controls.Add(this.RedLight);
@@ -74,6 +102,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.YellowLight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GreenLight)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -82,6 +111,9 @@
         private System.Windows.Forms.PictureBox RedLight;
         private System.Windows.Forms.PictureBox YellowLight;
         private System.Windows.Forms.PictureBox GreenLight;
+        private System.Windows.Forms.TextBox redInterval;
+        private System.Windows.Forms.TextBox yellowInterval;
+        private System.Windows.Forms.TextBox greenInterval;
     }
 }
 
