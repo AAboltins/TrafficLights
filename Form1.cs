@@ -14,13 +14,7 @@ namespace TrafficLights
     public partial class Form1 : Form
     {
         int tick = 0;
-        int R = 1000;
         int I = 1000; 
-        int Y = 1000;
-        int G = 1000;
-        string C1 = null;
-        string C2 = null;
-        string C3 = null;
         private Timer timerSwitch;
         public Form1()
         {
@@ -37,13 +31,16 @@ namespace TrafficLights
             timerSwitch.Start();
         }
         private void InitializeTrafficLights()
+        { 
+            RedLight.BackColor = Color.Gray;
+            YellowLight.BackColor = Color.Gray;
+            GreenLight.BackColor = Color.Gray;
+        }
+        private void InitializeIntervals()
         {
             redInterval.Text = "1000";
             yellowInterval.Text = "1000";
             greenInterval.Text = "1000";
-            RedLight.BackColor = Color.Gray;
-            YellowLight.BackColor = Color.Gray;
-            GreenLight.BackColor = Color.Gray;
         }
         private void TimerSwitch()
         {
